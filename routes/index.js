@@ -4,7 +4,7 @@ const PostBlog = require('./controller/postBlog')
 
 const router = express.Router()
 
-router.post('/blog/:id', GetBlogs)
-router.get('/blog/post', PostBlog)
+router.get('/blog/:id', GetBlogs)
+router.post('/blog/post', PostBlog)
 
 module.exports = router
