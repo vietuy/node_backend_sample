@@ -1,6 +1,6 @@
 const Blog = require('../models/blog')
 
-postBlog = (req, res) => {
+const postBlog = (req, res) => {
   const body = req.body
 
   if (!body) {
@@ -15,6 +15,7 @@ postBlog = (req, res) => {
   if (!blog) {
     return res.status(400).json({ success: false, error: err })
   }
+
 
   blog
     .save()
@@ -33,4 +34,4 @@ postBlog = (req, res) => {
     })
 }
 
-module.exports = { postBlog }
+module.exports =  postBlog
